@@ -69,8 +69,11 @@ var CaptureVideo = new Lang.Class({
         this.recordingActive = false;
 
         //prepare variable for screencast
+        var today = new Date();
+        var time = today.getHours() + "-" + today.getMinutes() + "-" + today.getSeconds();
+
         var fileRec =
-            Settings.getOption("s", Settings.FILE_NAME_SETTING_KEY) +
+            Settings.getOption("s", Settings.FILE_NAME_SETTING_KEY).replace("\%u",time) +
             UtilGSP.getFileExtension(
                 Settings.getOption("i", Settings.FILE_CONTAINER_SETTING_KEY)
             );

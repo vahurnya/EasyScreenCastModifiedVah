@@ -352,7 +352,7 @@ msgstr "Каталог для збереження"
 #: Options_UI.glade.h:55
 #, fuzzy, no-c-format
 msgid ""
-"The filename which may contain some escape sequences - %d and %t will be "
+"The filename which may contain some escape sequences - %d and %u will be "
 "replaced by the start date and time of the recording."
 msgstr ""
 "ім'я файлу може мати змінні - %d та %t, які будуть замінені на"

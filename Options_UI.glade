@@ -1126,7 +1126,7 @@ _dirpath = the absolute path of destination folder for the screencast video file
                       <object class="GtkLabel" id="label17">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="tooltip_text" translatable="yes">The filename which may contain some escape sequences - %d and %t will be replaced by the start date and time of the recording.</property>
+                        <property name="tooltip_text" translatable="yes">The filename which may contain some escape sequences - %d and %u will be replaced by the start date and time of the recording.</property>
                         <property name="halign">end</property>
                         <property name="hexpand">True</property>
                         <property name="label" translatable="yes">File name template</property>
@@ -1143,7 +1143,7 @@ _dirpath = the absolute path of destination folder for the screencast video file
                         <property name="can_default">True</property>
                         <property name="has_default">True</property>
                         <property name="receives_default">True</property>
-                        <property name="tooltip_text" translatable="yes">The filename which may contain some escape sequences - %d and %t will be replaced by the start date and time of the recording.</property>
+                        <property name="tooltip_text" translatable="yes">The filename which may contain some escape sequences - %d and %u will be replaced by the start date and time of the recording.</property>
                         <property name="hexpand">True</property>
                       </object>
                       <packing>

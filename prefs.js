@@ -1158,7 +1158,7 @@ const EasyScreenCastSettingsWidget = new GObject.Class({
         Settings.setOption(Settings.WIDTH_SETTING_KEY, 600);
         Settings.setOption(Settings.HEIGHT_SETTING_KEY, 400);
 
-        Settings.setOption(Settings.FILE_NAME_SETTING_KEY, "Screencast_%d_%t");
+        Settings.setOption(Settings.FILE_NAME_SETTING_KEY, "Screencast_%d_%u");
         Settings.setOption(Settings.FILE_FOLDER_SETTING_KEY, "");
         Settings.setOption(Settings.ACTIVE_POST_CMD_SETTING_KEY, false);
         Settings.setOption(Settings.ACTIVE_PRE_CMD_SETTING_KEY, false);
