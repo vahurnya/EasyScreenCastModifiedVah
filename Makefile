@@ -1,7 +1,7 @@
 # EasyScreenCast Makefile
 
-UUID = EasyScreenCast@iacopodeenosee.gmail.com
-NAME_EXTENSION = EasyScreenCast
+UUID = EasyScreenCastModifiedVah
+NAME_EXTENSION = EasyScreenCastVah
 BASE_MODULES = convenience.js prefs.js selection.js utilgsp.js utilwebcam.js COPYING extension.js metadata.json README.md settings.js timer.js utilnotify.js Options_UI.glade package.json stylesheet.css utilaudio.js utilrecorder.js utilexecmd.js display_module.js
 IMG_MEDIA = icon_defaultSel.svg Icon_Info.png icon_recordingSel.svg icon_default.svg Icon_Performance.svg Icon_Quality.svg  icon_recording.svg
 
@@ -14,7 +14,7 @@ else
 	INSTALLBASE = $(DESTDIR)/usr/share/gnome-shell/extensions
 endif
 
-INSTALLNAME = EasyScreenCast@iacopodeenosee.gmail.com
+INSTALLNAME = EasyScreenCastModifiedVah
 
 # The command line passed variable VERSION is used to set the version string
 # in the metadata and in the generated zip-file. If no VERSION is passed, the
