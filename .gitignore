@@ -1,9 +1,4 @@
-locale/de.mo
-locale/es.mo
-locale/fr.mo
-locale/it.mo
-locale/pt_BR.mo
-locale/ru.mo
+locale/*.mo
 *~
 
 # IDE files
@@ -11,4 +6,5 @@ locale/ru.mo
 
 node_modules/
 
-package-lock.json
+# some temporary space
+ignore/

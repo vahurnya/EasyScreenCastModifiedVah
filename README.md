@@ -1,35 +1,71 @@
-EasyScreenCast simplifies the use of the video recording function integrated in gnome shell, allows quickly to change the various settings of the desktop recording. Copyright (C) 2013-16 Borsato Ivano.
-- [Web Page](http://iacopodeenosee.wordpress.com/)
+# EasyScreenCast
+
+[![GitHub Workflow Status](https://github.com/EasyScreenCast/EasyScreenCast/actions/workflows/node.js.yml/badge.svg)](https://github.com/EasyScreenCast/EasyScreenCast/actions)
+
+EasyScreenCast simplifies the use of the video recording function integrated in gnome shell,
+allows quickly to change the various settings of the desktop recording.
+Copyright (C) 2013-16 Borsato Ivano.
+
+- [Web Page](https://iacopodeenosee.wordpress.com/projects/easyscreencast/)
 - [GNOME Shell Extensions Page](https://extensions.gnome.org/extension/690/easyscreencast/)
 - [Video](https://youtu.be/81E9AruraKU)
 
-# Requirements
-- Gnome Shell 3.12+ [ 3.16+ audio/webcam support ]
+----
+
+**Note:** Gnome Shell 42 brings in a new screenshot/screencast UI, which might already be all you need.
+Just run it via the default shortcut `Ctlr+Alt+Shift+R`.
+
+This extension provides more options to configure the screencast, e.g. quality settings and webcam support.
+
+----
+
+## Requirements
+- Gnome Shell 3.38+
 - Gstreamer 1.x [ common function/webcam support ]
 - gst plugins ugly [ x264 support ]
 - gst plugins base [ common function/theora support ]
 - gst plugins good [ mp4/mkv/webm/vp8/vp9 support ]
 
-# License Info
-EasyScreenCast is free software distributed under the GNU GPL. All files are under GPL v3. read [COPYING](COPYING.md) for more infomation about license.
+## License Info
+EasyScreenCast is free software distributed under the GNU GPL. All files are under GPL v3. read [COPYING](COPYING.md) for more information about license.
 
-# How to install
+## How to install
 there are several methods:
 
-1-from **gnome extension site**, just go on [this page](https://extensions.gnome.org/extension/690/easyscreencast/) and click/touch on the button ON, that's all.
+1.  From **github releases**. Just go to <https://github.com/EasyScreenCast/EasyScreenCast/releases/latest> and download
+    the latest zip file. Then install it (adjust the file name accordingly):
 
+    ```
+    gnome-extensions install --force EasyScreenCast_1.5.0_42.zip
+    ```
 
-2-from **github repo**, if you want the most up-to-date version, just do these simple steps
+    And logout/login again to activate the extension.
 
+2.  From **gnome extension site**, just go on [this page](https://extensions.gnome.org/extension/690/easyscreencast/)
+    and click/touch on the button ON, that's all.
 
-```
-git clone https://github.com/EasyScreenCast/EasyScreenCast.git
-cd EasyScreenCast
-make
-make install
-```
+3.  By installing the Debian/Ubuntu package "gnome-shell-extension-easyscreencast":
+    
+    ```
+    sudo apt install gnome-shell-extension-easyscreencast
+    ```
 
-# How to test changes
+4.  From **github repo**, if you want the most up-to-date version, just do these simple steps
+
+    ```
+    git clone https://github.com/EasyScreenCast/EasyScreenCast.git
+    cd EasyScreenCast
+    make
+    make install
+    ```
+
+    Note: You'll need to install the following dev dependencies once:
+
+    ```
+    sudo apt install gettext jq intltool
+    ```
+
+## How to test changes
 
 You can run a new session to test changes to the installed extension:
 
@@ -37,7 +73,7 @@ You can run a new session to test changes to the installed extension:
 dbus-run-session -- gnome-shell --nested
 ```
 
-# How to view the logs
+## How to view the logs
 You must **enable the verbose logs in options window** and after that you can find the logs by typing this on terminal:
 
 ```
@@ -51,7 +87,7 @@ to open the option windows from terminal try that on terminal:
 gnome-extensions prefs EasyScreenCast@iacopodeenosee.gmail.com
 ```
 
-# Translation
+## Translation
 If you want to help with translations, just follow these simple step:
 
 1 - Create a new folders for the translations(if NOT exist), where $lang is a code language [[https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes)]
@@ -70,7 +106,7 @@ mkdir -p locale/$lang/LC_MESSAGES
 msgfmt locale/$lang.po -o locale/$lang/LC_MESSAGES/EasyScreenCast@iacopodeenosee.gmail.com.mo
 ```
 
-# Converting to GIF
+## Converting to GIF
 
 There are a wide variety of video editors that should be able to convert
 the screencasts to GIFs. An easy way to convert a file using the command
@@ -83,3 +119,17 @@ ffmpeg -i _filepath -pix_fmt rgb24 _dirpath/_filename.gif
 For more information see for example:
 
  - [How do I convert a video to GIF using ffmpeg, with reasonable quality?](https://superuser.com/questions/556029/how-do-i-convert-a-video-to-gif-using-ffmpeg-with-reasonable-quality)
+
+
+## Test matrix
+
+| Distribution / gnome-shell           | Installation | Screen Recording | +Video Recording | +Audio Recording |
+|--------------------------------------|--------------|------------------|------------------|------------------|
+|Debian 11 Bullseye (gnome-shell 3.38) |  ✔           |  ✔              |  ✔               |  ✔               |
+|Ubuntu 22.04 LTS (gnome-shell 42.2)   |  ✔           |  ✔              |  ✔               |  ✔               |
+|Debian Experimental (gnome-shell 43)  |  ✔           |  ✔              |  ✔               |  ✔               |
+
+Note: Only wayland sessions, always a fresh install of the linux distribution. Screen cast was the whole screen.
+Quality setting: FPS 30, VP8, webm container.
+
+X11 session is not tested.
